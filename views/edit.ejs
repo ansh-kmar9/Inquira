@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Edit post</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Edit your post</h1>
+        
+        <div class="post">
+            <p><strong>Post ID:</strong> <%= post.id %></p>
+            <p><strong>Username:</strong> <%= post.username %></p>
+        </div>
+        
+        <!-- using method override for sending the patch request -->
+        <form method="POST" action="/posts/<%=post.id%>/?_method=PATCH">
+            <textarea name="content" required><%= post.content %></textarea>
+            <button type="submit">Update Post</button>
+        </form>
+        
+        <div style="text-align: center; background: none; border: none; box-shadow: none; padding: 0; margin-top: 20px;">
+            <a href="http://localhost:8080/posts/<%= post.id%>">← Back to post</a>
+            <a href="http://localhost:8080/posts">← Back to all posts</a>
+        </div>
+    </div>
+</body>
+</html>

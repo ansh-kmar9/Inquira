@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Posts in detail</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Post Details</h1>
+        
+        <% if (post) { %>
+            <section class="post">
+                <h2>Post ID: <%= post.id %></h2>
+                <h3 class="user">@<%= post.username %></h3>
+                <p class="content"><%= post.content %></p>
+            </section>
+        <% } else { %>
+            <div class="post">
+                <h2 style="color: #e53e3e; text-align: center;">Post not available</h2>
+            </div>
+        <% } %>
+        
+        <div style="text-align: center; background: none; border: none; box-shadow: none; padding: 0; margin-top: 20px;">
+            <% if (post) { %>
+                <a href="http://localhost:8080/posts/<%= post.id%>/edit">Edit this post</a>
+            <% } %>
+            <a href="http://localhost:8080/posts">← Back to all posts</a>
+        </div>
+    </div>
+</body>
+</html>

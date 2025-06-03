@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    color: #2d3748;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Typography */
+h1 {
+    color: #667eea;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 2rem 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+h2 {
+    color: #4a5568;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 1.5rem 0;
+}
+
+h3 {
+    color: #667eea;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+
+/* Card Styles */
+div {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(102, 126, 234, 0.2);
+    border-radius: 16px;
+    padding: 24px;
+    margin: 20px 0;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+div:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(102, 126, 234, 0.15);
+    border-color: rgba(102, 126, 234, 0.3);
+}
+
+.post {
+    position: relative;
+    overflow: hidden;
+}
+
+.post::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 16px 16px 0 0;
+}
+
+/* User styling */
+.user {
+    color: #667eea;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.user::before {
+    content: '👤';
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+/* Content styling */
+.content {
+    color: #4a5568;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin: 16px 0;
+    padding: 16px;
+    background: rgba(102, 126, 234, 0.05);
+    border-radius: 12px;
+    border-left: 4px solid #667eea;
+}
+
+/* Links */
+a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin: 4px 8px 4px 0;
+    background: rgba(102, 126, 234, 0.1);
+    border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+a:hover {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* Forms */
+form {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 24px;
+    border-radius: 16px;
+    margin: 20px 0;
+    border: 1px solid rgba(102, 126, 234, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 16px;
+    border: 2px solid rgba(102, 126, 234, 0.2);
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.9);
+    margin: 8px 0 16px 0;
+    resize: vertical;
+    min-height: 50px;
+}
+
+input[type="text"]:focus, textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    background: white;
+}
+
+textarea {
+    min-height: 120px;
+    line-height: 1.6;
+}
+
+/* Buttons */
+button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 8px 8px 8px 0;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Delete button specific styling */
+form button {
+    background: linear-gradient(135deg, #e53e3e 0%, #c53030 100%);
+    box-shadow: 0 4px 12px rgba(229, 62, 62, 0.3);
+}
+
+form button:hover {
+    box-shadow: 0 8px 20px rgba(229, 62, 62, 0.4);
+}
+
+/* HR */
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #667eea, transparent);
+    margin: 30px 0;
+    border-radius: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+        margin: 1.5rem 0;
+    }
+    
+    div {
+        padding: 20px;
+        margin: 15px 0;
+    }
+    
+    .content {
+        font-size: 1rem;
+        padding: 12px;
+    }
+    
+    a, button {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+        margin: 4px 4px 4px 0;
+    }
+    
+    input[type="text"], textarea {
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    div {
+        padding: 16px;
+        margin: 12px 0;
+    }
+    
+    .user::before {
+        width: 28px;
+        height: 28px;
+        font-size: 14px;
+    }
+    
+    a, button {
+        display: block;
+        text-align: center;
+        margin: 8px 0;
+        width: 100%;
+    }
+    
+    form {
+        padding: 20px;
+    }
+}
+
+/* Animation for loading states */
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.loading {
+    animation: pulse 2s infinite;
+}
+
+/* Focus states for accessibility */
+a:focus, button:focus, input:focus, textarea:focus {
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+    
+    div {
+        background: white;
+        border: 1px solid #ccc;
+        box-shadow: none;
+    }
+    
+    a, button {
+        background: white;
+        color: black;
+        border: 1px solid #ccc;
+    }
+}
