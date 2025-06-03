@@ -37,7 +37,7 @@ let posts = [
 ];
 
 app.get("/", (req, res) => {
-  res.send("server is working fine");
+  res.redirect("/posts");
 });
 
 app.get("/posts", (req, res) => {
