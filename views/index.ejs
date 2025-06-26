@@ -15,8 +15,8 @@
             <h3 class="user">@ <%= post.username %></h3>  
             <p class="content"><%= post.content %></p>
             <br>
-            <a href="http://localhost:8080/posts/<%= post.id%>">View details</a>
-            <a href="http://localhost:8080/posts/<%= post.id%>/edit">Edit details</a>
+            <a href="https://inquira-1.onrender.com/posts/<%= post.id%>">View details</a>
+            <a href="https://inquira-1.onrender.com/posts/<%= post.id%>/edit">Edit details</a>
             <form action="/posts/<%= post.id%>?_method=DELETE" method="post">
                 <button>Delete Post</button>
             </form>
